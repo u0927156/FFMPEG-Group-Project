@@ -614,8 +614,9 @@ static int init_thread_copy(AVCodecContext *avctx)
 
 static av_cold int wavpack_decode_init(AVCodecContext *avctx)
 {
-    WavpackContext *s = avctx->priv_data;
-
+  
+  WavpackContext *s = avctx->priv_data;
+    
     s->avctx = avctx;
 
     s->fdec_num = 0;

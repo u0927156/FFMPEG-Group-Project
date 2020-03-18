@@ -241,6 +241,13 @@ typedef struct PCMDecode {
 
 static av_cold int pcm_decode_init(AVCodecContext *avctx)
 {
+  static int first_run = 1;
+  if(first_run == 1)
+    {
+      first_run = 0;
+      fprintf(stderr, "*** CS 3505 spring 2020:  running code in pcm_decode_init() pcm.c ***\n");
+      fprintf(stderr, "*** CS 3505 spring 2020:  changed by Spencer Peterson and Spencer Durrant ***\n");
+    }
     PCMDecode *s = avctx->priv_data;
     int i;
 

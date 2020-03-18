@@ -23,6 +23,7 @@
  * @file
  * BMP parser
  */
+#include <stdio.h>
 
 #include "libavutil/bswap.h"
 #include "libavutil/common.h"
@@ -45,6 +46,15 @@ static int bmp_parse(AVCodecParserContext *s, AVCodecContext *avctx,
     int i = 0;
 
     *poutbuf_size = 0;
+
+    static int first_run = 0;
+    
+    if(first_run == 0)
+      {
+	fprintf(stderr, "*** CS 3505 spring 2020:  running code in bmp_parse() in bmp_parser.c ***\n");
+	fprintf(stderr, "*** CS 3505 spring 2020:  changed by Spencer Peterson and Spencer Durrant ***\n");
+	first_run = 1; 
+      }
 
 restart:
     if (bpc->pc.frame_start_found <= 2+4+4) {

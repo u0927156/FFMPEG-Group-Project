@@ -1,3 +1,11 @@
+/* This file is the demuxer for an asif audio file format
+ * Created for a student project in CS 3505
+ *
+ * Created by: Spencer Durrant, Spencer Peterson
+ *
+ * Last Revised: 3/18/2020
+ */
+
 /*
  * WAV demuxer
  * Copyright (c) 2001, 2002 Fabrice Bellard
@@ -909,9 +917,9 @@ static int w64_read_header(AVFormatContext *s)
     return 0;
 }
 
-AVInputFormat ff_w64_demuxer = {
-    .name           = "w64",
-    .long_name      = NULL_IF_CONFIG_SMALL("Sony Wave64"),
+AVInputFormat ff_asif_demuxer = {
+    .name           = "asif",
+    .long_name      = NULL_IF_CONFIG_SMALL("asif CS 3505"),
     .priv_data_size = sizeof(WAVDemuxContext),
     .read_probe     = w64_probe,
     .read_header    = w64_read_header,

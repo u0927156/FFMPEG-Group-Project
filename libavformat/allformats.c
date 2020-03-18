@@ -51,6 +51,10 @@ extern AVOutputFormat ff_amr_muxer;
 extern AVInputFormat  ff_amrnb_demuxer;
 extern AVInputFormat  ff_amrwb_demuxer;
 extern AVInputFormat  ff_anm_demuxer;
+
+extern AVInputFormat ff_asif_demuxer; // asif format added for cs 3505
+extern AVOutputFormat ff_asif_muxer; 
+
 extern AVInputFormat  ff_apc_demuxer;
 extern AVInputFormat  ff_ape_demuxer;
 extern AVInputFormat  ff_apng_demuxer;
